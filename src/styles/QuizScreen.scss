@@ -1,3 +1,18 @@
+.quiz-screen {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  align-items: center;
+  max-width: 450px;
+  & .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+
 .loguito {
   width: 8rem;
 }
@@ -6,9 +21,6 @@
   padding: 1rem;
 }
 
-.container-loguito {
-  width: 100vw;
-}
 
 button, a{
   background-color: #4B83FC !important;

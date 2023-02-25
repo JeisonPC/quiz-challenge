@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import loguito from "../assets/logo-jeison.png";
 import "../styles/QuizScreen.scss";
+
+import loguito from "../assets/logo-jeison.png";
+
 
 function QuizScreen() {
   const [data, setData] = useState([]);
@@ -53,27 +55,24 @@ function QuizScreen() {
 
   const handleResults = () => {
     localStorage.setItem("score", JSON.stringify(score));
-    
+
     // Redirigir a la página de resultados
     navigate("/resultados");
   };
 
   return (
-    <div>
+    <div className="quiz-screen">
       <h1 className="title">Pregunta {currentQuestion + 1}</h1>
       {data[currentQuestion] && (
         <p className="question">{data[currentQuestion].question}</p>
       )}
       {data[currentQuestion] && (
-        <div>
+        <div className="buttons">
           <button onClick={() => handleAnswer("True")}>True</button>
           <button onClick={() => handleAnswer("False")}>False</button>
         </div>
       )}
-
-      <div className="container-loguito">
-        <img className="loguito" src={loguito} alt="loguito" />
-      </div>
+      <img className="loguito" src={loguito} alt="loguito" />
     </div>
   );
 }

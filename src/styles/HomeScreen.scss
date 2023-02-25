@@ -1,0 +1,11 @@
+.init-quest {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  align-items: center;
+  max-width: 450px;
+  & a {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
