@@ -62,7 +62,7 @@ function QuizScreen() {
 
   return (
     <div className="quiz-screen">
-      <h1 className="title">Pregunta {currentQuestion + 1}</h1>
+      <h1 className="title">Question {currentQuestion + 1}</h1>
       {data[currentQuestion] && (
         <p className="question">{data[currentQuestion].question}</p>
       )}

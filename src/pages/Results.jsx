@@ -8,7 +8,6 @@ import "../styles/Results.scss";
 
 
 
-
 function Results() {
   const [score, setScore] = useState(null);
 
